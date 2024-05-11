@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Global Attribute
+        1- Start with data-counter |data-x
+    -->
+    <img src="asd.jpg" 
+        onclick="IncreamentCounter()"
+        style="width:100px;height: 100px;">
+    <img src="asd.jpg" 
+        onclick="IncreamentCounter()"
+        style="width:100px;height: 100px;">
+    s<img src="asd.jpg" 
+        onclick="IncreamentCounter()"
+        style="width:100px;height: 100px;">
+    <br>
+    <input type="button" 
+    value="Show No Of Click" 
+    onclick="DisplayREsult()">
+    <br>
+    <div id="div1"></div>
+    <script>
+        var img1Click=0;
+        function DisplayREsult(){
+            document.getElementById("div1").innerHTML
+                =img1Click;
+        }
+        function IncreamentCounter(){
+            img1Click++;
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canvas Demo</h1>
+    <br>
+    <br>
+    <br>
+    <canvas id="mycanvas" style="width:500px;height:300px;border:3px solid blue;">
+    </canvas>
+
+    <script>
+        
+        //using javascript
+        var canvas=document.getElementById("mycanvas");
+        var ctx=canvas.getContext("2d");
+        console.log(ctx);
+        ctx.arc(100,100,50,Math.PI/2,Math.PI*3/4,true);
+        ctx.stroke();
+        //fill color
+        // ctx.fillStyle="#ff0000";//default black
+        // ctx.strokeStyle="#0000ff";//default black
+        // ctx.lineWidth=2;//thinkens of stroke
+
+        // var img=new Image();
+        // img.src='asd.jpg';
+        // img.onload=function(){
+        //     ctx.drawImage(img,50,50,100,100);
+        // }
+        //draw arc
+        // ctx.arc(100,100,50,0,Math.PI,true);
+        // ctx.fill();
+
+        //draw text
+        // ctx.font="30px Arial";
+        // ctx.fillText("ITI",40,50);
+
+        // //ctx.font="50px Arial";
+        // ctx.fillStyle="#00ff00";
+        // //ctx.fillText("Assiut",140,50);
+        // ctx.strokeText("Assiut",140,50);
+
+        //ctx.rect(200,120,100,50);
+        // ctx.rect(100,20,100,50);
+        
+        // ctx.fill();//write paper
+        // ctx.stroke();
+        // ctx.clearRect(0,0,150,100);
+
+        // //draw rectangle(x,y,w,h)
+        // ctx.fillRect(100,20,100,50);
+
+        // ctx.strokeStyle="#00ff00";//default black
+        // ctx.strokeRect(100,20,100,50);
+        //draw line
+        ctx.moveTo(20,10);//point(x1,y1)
+        ctx.lineTo(20,100);//point2(x2,y2)
+        ctx.lineTo(40,60);//point2(x2,y2)
+        
+        ctx.stroke();
+    </script>
+</body>
+</html>

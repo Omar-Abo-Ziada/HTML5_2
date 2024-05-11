@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SVG Graphic</h1>
+    <svg style="width:600px;height: 300px;border:2px solid red">
+        <!-- <rect x="100" y="50" width="200" height="100" fill="#88aabb"></rect>-->
+        <!--  
+        <circle cx="150" cy="200" r="100" 
+                fill="yellow" stroke="blue"
+                stroke-width="5"></circle> -->
+        <!-- <line 
+            x1="100" y1="100" x2="200" y2="200"
+            style="stroke:red;" stroke-width="5"></line> -->
+        <!-- <rect x="50" y="50" style="width:50px;height:50px;fill:rgba(50, 50, 50, .5)"></rect>
+        <ellipse id="elp" cx="150" cy="200" rx="50" ry="100" fill="green" onclick="changeColor()" >
+            <title>Simple Ellipse</title>
+        </ellipse> -->
+        <polygon points="100,50 200,100 50,200" onclick="name()" stroke="yellow" 
+        fill="green" stroke-width="5"></polygon>
+        <polygon points="150,50 250,100 50,200" onclick="name()" stroke="blue" 
+        fill="rgba(0,0,0,0)" stroke-width="5"></polygon>
+        <text x="100" y="100" >hello</text>
+    </svg>
+<script>
+    function name(){
+        alert("Triangle");
+    }
+    function changeColor(){
+        console.log(event.target);
+        event.target.style.fill="red";
+        event.target.setAttribute("cx",200);
+    }
+</script>
+</body>
+
+</html>

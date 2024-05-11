@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Game /image /paint-->
+    <canvas id="myCanvas" style="border:2px solid red">
+    </canvas>
+    <script>
+        var canvaselem=document.getElementById("myCanvas");
+        var ctx= canvaselem.getContext("2d");   
+        ctx.fillStyle="red";
+        ctx.strokeStyle="#00ff00";
+        ctx.font="20px Arial";
+        console.log(ctx);
+        //Rect Fill/Stroke
+        // ctx.fillRect(50,50,50,50);//(x,y,w,h)
+        // ctx.lineWidth="5";
+        // ctx.strokeRect(50,50,50,50);
+
+        // ctx.fillStyle="blue";
+        // ctx.fillRect(100,100,50,50);
+        // ctx.rect(50,50,50,50);
+        // ctx.rect(100,100,50,50);
+        // ctx.fill();
+        // ctx.stroke();
+        //Text
+        //  ctx.fillText("ITI",100,50)
+        //  ctx.strokeText("ITI",100,50);
+        //Line
+        // ctx.moveTo(50,50);
+        // ctx.lineTo(100,50);
+        // ctx.stroke();
+        var image=new Image();
+        image.src="asd.jpg";
+        
+        image.onload=loadImage;
+
+        function loadImage(){
+            ctx.drawImage(image,50,50,100,100);
+        }
+    </script>
+</body>
+</html>

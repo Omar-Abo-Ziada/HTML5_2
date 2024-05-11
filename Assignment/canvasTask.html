@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas task</title>
+</head>
+<body>
+    <canvas id="htmlCanvas" style="border: 3px solid black;">
+    </canvas>
+
+    <script>
+        var scriptCanvas = document.getElementById("htmlCanvas");
+        var ctx = scriptCanvas.getContext("2d");
+        console.log(ctx);
+
+        var image = new Image();
+        image.src = "sad.png"; 
+
+        var image2 = new Image();
+        image2.src = "smiley.png"; 
+
+
+        image.onload = loadImage;
+
+        scriptCanvas.onmouseover = loadNewImage;
+
+
+        function loadImage() {
+            ctx.drawImage(image, 50, 50, 100, 100);
+        }
+
+        scriptCanvas.onmouseleave = loadImage;
+
+
+
+        function loadNewImage() {
+            ctx.clearRect(0, 0, scriptCanvas.width, scriptCanvas.height);  // Clear the canvas
+            ctx.drawImage(image2, 50, 50, 100, 100);
+        }
+
+
+    </script>
+</body>
+</html>

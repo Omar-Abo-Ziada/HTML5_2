@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Global Attribute
+        1- Start with data-counter |data-x
+    -->
+    <img src="asd.jpg" data-counter="0"
+        onclick="IncreamentCounter(this)"
+        style="width:100px;height: 100px;">
+    <img src="asd.jpg" data-counter="0"
+        onclick="IncreamentCounter(this)"
+        style="width:100px;height: 100px;">
+
+    <br>
+    <input type="button" 
+    value="Show No Of Click" 
+    onclick="DisplayREsult1()">
+    <input type="button" 
+    value="Show No Of Click" 
+    onclick="DisplayREsult2()">
+    <input type="button" 
+    value="Show No Of Click" 
+    onclick="DisplayREsult3()">
+    <br>
+    <div id="div1"></div>
+    <script>
+        
+        function DisplayREsult(){
+            document.getElementById("div1").innerHTML
+                =img1Click;
+        }
+        function IncreamentCounter(imageElem){
+           console.log(imageElem);
+           //read old value
+           var count= imageElem.getAttribute("data-counter");
+           //change value by 1
+           //console.log(count);
+           count=parseInt(count)+1;
+            //save changein image attribute
+           imageElem.setAttribute("data-counter",count);
+           console.log(imageElem.getAttribute("src"));
+        }
+    </script>
+
+
+</body>
+</html>
